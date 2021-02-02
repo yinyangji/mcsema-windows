@@ -1,0 +1,85 @@
+# Copyright (c) 2017 Trail of Bits, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#==============================================================================#
+# This file specifies intentionally untracked files that git should ignore.
+# See: http://www.kernel.org/pub/software/scm/git/docs/gitignore.html
+#
+# This file is intentionally different from the output of `git svn show-ignore`,
+# as most of those are useless.
+#==============================================================================#
+
+#==============================================================================#
+# File extensions to be ignored anywhere in the tree.
+#==============================================================================#
+# Temp files created by most text editors.
+*~
+# Byte compiled python modules.
+*.pyc
+# vim swap files
+.*.swp
+# Object files
+*.o
+*.so
+
+tools/regtrace/obj-ia32/*
+tools/regtrace/obj-intel64/*
+
+*.idb
+*.id0
+*.id1
+*.id2
+*.log
+*.nam
+*.til
+
+third_party/*
+generated/*
+cxxcommon
+cxx-common
+
+tools/build/*
+tools/dist/*
+tools/mcsema_disass.egg-info/*
+tools/mcsema_disass/ida/CFG_pb2.py
+tools/mcsema_disass/binja/CFG_pb2.py
+
+#ignore test binaries, only keep CFGs in git
+tests/linux/x86/*.elf
+tests/linux/amd64/*.elf
+
+.DS_Store
+.project
+.cproject
+.settings
+.idea
+
+#==============================================================================#
+# Directories to ignore (do not add trailing '/'s, they skip symlinks).
+#==============================================================================#
+build
+package
+*.deb
+*.rpm
+# Clang, which is tracked independently.
+
+# Ignore local binary ninja installations
+binaryninja
+
+#ignore vscode dir
+.vscode
+
+#ignore generated version files
+VERSION
+
